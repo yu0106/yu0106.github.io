@@ -434,7 +434,6 @@ SPAWN_RULES[SIM_MODE_WPAC].doSpawn = function(b){
     if(random()<0.000225) b.spawnArchetype('wp17');	// central philippines (eastern) 
     if(random()<0.00016875) b.spawnArchetype('wp18');	// central philippines (western)
     // extratropical cyclones
-    if(random()<0.01-0.002*seasonalSine(b.tick)) b.spawnArchetype('ex');      
 };	
 SPAWN_RULES[SIM_MODE_EXTREME].doSpawn = function(b){
     // tropic spawn area
@@ -904,7 +903,7 @@ ENV_DEFS[SIM_MODE_MEGABLOBS].ULSteering = {};
 ENV_DEFS[SIM_MODE_EXPERIMENTAL].ULSteering = {};
 ENV_DEFS[SIM_MODE_WPAC].ULSteering = {
     modifiers: {
-        hadleyUpperBound: 4
+        hadleyUpperBound: 2
     }
 };    
 ENV_DEFS[SIM_MODE_EXTREME].ULSteering = {};
@@ -922,7 +921,7 @@ ENV_DEFS.defaults.shear = {
         return u.vec;
     },
     displayFormat: v=>{
-        let speed = round(v.mag()*100)/100;
+        let speed = round(v.mag()*80)/80;
         let direction = v.heading();
         // speed is still in "u/hr" (coordinate units per hour) for now
         return speed + ' u/hr ' + compassHeading(direction);
@@ -1137,10 +1136,10 @@ ENV_DEFS[SIM_MODE_WPAC].SST = {
         return t+anom;
     },
     modifiers: {
-        peakSeasonPolarTemp: 0,
-        offSeasonPolarTemp: -3,
-        offSeasonTropicsTemp: 26.8,
-        peakSeasonTropicsTemp: 29.75
+        peakSeasonPolarTemp: 20,
+        offSeasonPolarTemp: 10,
+        offSeasonTropicsTemp: 29.8,
+        peakSeasonTropicsTemp: 40.75
     }
 };       
 ENV_DEFS[SIM_MODE_EXTREME].SST = {
