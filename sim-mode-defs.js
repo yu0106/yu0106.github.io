@@ -921,7 +921,7 @@ ENV_DEFS.defaults.shear = {
         return u.vec;
     },
     displayFormat: v=>{
-        let speed = round(v.mag()*80)/80;
+        let speed = round(v.mag()*70)/70;
         let direction = v.heading();
         // speed is still in "u/hr" (coordinate units per hour) for now
         return speed + ' u/hr ' + compassHeading(direction);
@@ -1138,8 +1138,8 @@ ENV_DEFS[SIM_MODE_WPAC].SST = {
     modifiers: {
         peakSeasonPolarTemp: 20,
         offSeasonPolarTemp: 10,
-        offSeasonTropicsTemp: 29.8,
-        peakSeasonTropicsTemp: 40.75
+        offSeasonTropicsTemp: 25.8,
+        peakSeasonTropicsTemp: 33.75
     }
 };       
 ENV_DEFS[SIM_MODE_EXTREME].SST = {
