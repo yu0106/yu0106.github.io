@@ -675,10 +675,10 @@ ENV_DEFS[SIM_MODE_MEGABLOBS].jetstream = {
 ENV_DEFS[SIM_MODE_EXPERIMENTAL].jetstream = {};
 ENV_DEFS[SIM_MODE_WPAC].jetstream = {
 	modifiers: {
-        peakLat: 0.22,
-        antiPeakLat: 0.45,
-        peakRange: 0.25,
-        antiPeakRange: 0.43
+        peakLat: 0.2,
+        antiPeakLat: 0.38,
+        peakRange: 0.2,
+        antiPeakRange: 0.37
     }
 };    
 ENV_DEFS[SIM_MODE_EXTREME].jetstream = {};
@@ -903,7 +903,7 @@ ENV_DEFS[SIM_MODE_MEGABLOBS].ULSteering = {};
 ENV_DEFS[SIM_MODE_EXPERIMENTAL].ULSteering = {};
 ENV_DEFS[SIM_MODE_WPAC].ULSteering = {
     modifiers: {
-        hadleyUpperBound: 2
+        hadleyUpperBound: 5
     }
 };    
 ENV_DEFS[SIM_MODE_EXTREME].ULSteering = {};
