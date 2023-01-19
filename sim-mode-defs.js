@@ -1136,8 +1136,8 @@ ENV_DEFS[SIM_MODE_WPAC].SST = {
         return t+anom;
     },
     modifiers: {
-        peakSeasonPolarTemp: 20,
-        offSeasonPolarTemp: 10,
+        peakSeasonPolarTemp: 25,
+        offSeasonPolarTemp: 15,
         offSeasonTropicsTemp: 25.8,
         peakSeasonTropicsTemp: 33.75
     }
@@ -1227,7 +1227,7 @@ ENV_DEFS[SIM_MODE_EXPERIMENTAL].moisture = {};
 ENV_DEFS[SIM_MODE_WPAC].moisture = {
     modifiers: {
         polarMoisture: 0.45,
-        tropicalMoisture: 0.77,
+        tropicalMoisture: 0.85,
         mountainMoisture: 0
     }
 };    
